@@ -1,0 +1,14 @@
+<input type="button" value="send request">
+<h3></h3>
+<script>
+    document.querySelector("input").onclick=function(){
+        var xhr=new XMLHttpRequest();
+        xhr.open('get','a.php?name=rose&skill=swim');
+        xhr.onload=function(){
+            console.log(xhr.responseText);
+            document.querySelector('h3').innerHTML=xhr.responseText;
+        }
+        xhr.send(null);
+    }
+
+</script>
